@@ -43,7 +43,7 @@ button {
     background-color: #b7cfdd;
     background-image: url("images/background.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -175,19 +175,16 @@ button:focus-visible {
 
 .image-frame {
     position: relative;
-    min-height: 280px;
-    display: grid;
-    place-items: center;
+    display: block;
     overflow: hidden;
     border-radius: 12px;
-    background: var(--navy);
+    background: transparent;
 }
 
 #jet-image {
     display: block;
     width: 100%;
-    height: min(48vw, 440px);
-    object-fit: contain;
+    height: auto;
 }
 
 #image-status {
@@ -269,14 +266,6 @@ button:focus-visible {
 
     .setup-card {
         transform: none;
-    }
-
-    .image-frame {
-        min-height: 210px;
-    }
-
-    #jet-image {
-        height: 58vw;
     }
 
     .choices {
