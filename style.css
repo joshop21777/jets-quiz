@@ -46,11 +46,16 @@ button {
 }
 
 .setup-card {
-    width: min(100%, 520px);
+    width: min(100%, 660px);
     padding: clamp(28px, 6vw, 52px);
+    border: 1px solid rgba(255, 255, 255, 0.72);
     border-radius: 22px;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.68);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
+
+.setup-card h1 {
+    white-space: nowrap;
 }
 
 .eyebrow {
@@ -172,14 +177,14 @@ button:focus-visible {
     place-items: center;
     overflow: hidden;
     border-radius: 12px;
-    background: #dfe5ec;
+    background: var(--navy);
 }
 
 #jet-image {
     display: block;
     width: 100%;
     height: min(48vw, 440px);
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #image-status {
@@ -253,6 +258,10 @@ button:focus-visible {
 @media (max-width: 620px) {
     .quiz-view {
         padding: 16px;
+    }
+
+    .setup-card h1 {
+        white-space: normal;
     }
 
     .image-frame {
