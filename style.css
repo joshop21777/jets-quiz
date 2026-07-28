@@ -40,18 +40,21 @@ button {
     display: grid;
     place-items: center;
     padding: 32px 20px;
-    background:
-        linear-gradient(120deg, rgba(7, 24, 42, 0.82), rgba(7, 24, 42, 0.38)),
-        url("images/background.jpg") center / cover;
+    background-color: #b7cfdd;
+    background-image: url("images/background.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .setup-card {
-    width: min(100%, 660px);
+    width: min(100%, 720px);
     padding: clamp(28px, 6vw, 52px);
     border: 1px solid rgba(255, 255, 255, 0.72);
     border-radius: 22px;
-    background: rgba(255, 255, 255, 0.68);
+    background: rgba(255, 255, 255, 0.48);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+    transform: translateY(clamp(-80px, -25%, -40px));
 }
 
 .setup-card h1 {
@@ -264,6 +267,10 @@ button:focus-visible {
         white-space: normal;
     }
 
+    .setup-card {
+        transform: none;
+    }
+
     .image-frame {
         min-height: 210px;
     }
@@ -274,5 +281,11 @@ button:focus-visible {
 
     .choices {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-height: 700px) {
+    .setup-card {
+        transform: none;
     }
 }
